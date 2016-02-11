@@ -41,12 +41,12 @@
 *********************************************************************************************************/
 void MutichannelGasSensor::printRatio(int res, int res0)
 {
-    Serial.print("DEBUGGING: res/res0 = ");
+    Serial.println("DEBUGGING: res/res0 = ");
     Serial.print(res);
     Serial.print("/");
     Serial.print(res0);
     Serial.print(" = ");
-    Serial.print((float)res/res0);
+    Serial.println((float)res/res0);
 }
 
 /*********************************************************************************************************
