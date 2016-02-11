@@ -45,6 +45,7 @@ private:
     uint16_t res[3];//sensors res
     uint8_t is_connected;
 
+    void printRatio(int res, int res0);
     void sendI2C(unsigned char dta);
     int16_t readData(uint8_t cmd);
     int16_t readR0(void);
