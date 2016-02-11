@@ -54,6 +54,7 @@ private:
 
 public:
 
+    void printThreeRatios();
     void begin(int address);
     void begin();
     void changeI2cAddr(uint8_t newAddr);
