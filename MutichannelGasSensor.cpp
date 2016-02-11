@@ -41,14 +41,23 @@
 *********************************************************************************************************/
 void MutichannelGasSensor::printRatio(int res, int res0)
 {
-    Serial.println("DEBUGGING: res/res0 = ");
     Serial.print(res);
     Serial.print("/");
     Serial.print(res0);
-    Serial.print(" = ");
-    Serial.println((float)res/res0);
 }
 
+/*********************************************************************************************************
+** Function name:           printThreeRatios
+** Descriptions:            prints resistance ratio for debugging, this is private
+*********************************************************************************************************/
+void MutichannelGasSensor::printThreeRatios()
+{
+    Serial.printRatio(res[0], res0[0]);
+    Seial.print(", ");
+    Serial.printRatio(res[1], res0[1]);
+    Seial.print(", ");
+    Serial.printRatio(res[2], res0[2]);
+}
 /*********************************************************************************************************
 ** Function name:           begin
 ** Descriptions:            initialize I2C
