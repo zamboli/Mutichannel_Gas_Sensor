@@ -39,7 +39,7 @@
 ** Function name:           printRatio
 ** Descriptions:            prints resistance ratio for debugging, this is private
 *********************************************************************************************************/
-void MultichannelGasSensor::printRatio(int res, int res0)
+void MutichannelGasSensor::printRatio(int res, int res0)
 {
     Serial.print("DEBUGGING: res/res0 = ");
     Serial.print(res);
