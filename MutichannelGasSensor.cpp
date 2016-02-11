@@ -41,7 +41,7 @@
 *********************************************************************************************************/
 void MultichannelGasSensor::printRatio(int res, int res0)
 {
-    Serial.print("BUGS! BUGS! BUGS!: res/res0 = ");
+    Serial.print("DEBUGGING: res/res0 = ");
     Serial.print(res);
     Serial.print("/");
     Serial.print(res0);
@@ -220,7 +220,7 @@ float MutichannelGasSensor::calcGas(int gas)
             if(ratio0 < 0.04) ratio0 = 0.04;
             if(ratio0 > 0.8) ratio0 = 0.8;
             //c = 1 / (ratio0 * ratio0 * pow(10, 0.4));
-            
+            printRatio(res[0],res0[0]);
             c = pow(ratio0, -1.67)/1.47;  //modi by jack
             break;
         }
