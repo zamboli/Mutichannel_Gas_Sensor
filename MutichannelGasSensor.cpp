@@ -52,11 +52,11 @@ void MutichannelGasSensor::printRatio(int res, int res0)
 *********************************************************************************************************/
 void MutichannelGasSensor::printThreeRatios()
 {
-    Serial.printRatio(res[0], res0[0]);
-    Seial.print(", ");
-    Serial.printRatio(res[1], res0[1]);
-    Seial.print(", ");
-    Serial.printRatio(res[2], res0[2]);
+    printRatio(res[0], res0[0]);
+    Serial.print(", ");
+    printRatio(res[1], res0[1]);
+    Serial.print(", ");
+    printRatio(res[2], res0[2]);
 }
 /*********************************************************************************************************
 ** Function name:           begin
@@ -229,7 +229,6 @@ float MutichannelGasSensor::calcGas(int gas)
             if(ratio0 < 0.04) ratio0 = 0.04;
             if(ratio0 > 0.8) ratio0 = 0.8;
             //c = 1 / (ratio0 * ratio0 * pow(10, 0.4));
-            printRatio(res[0],res0[0]);
             c = pow(ratio0, -1.67)/1.47;  //modi by jack
             break;
         }
